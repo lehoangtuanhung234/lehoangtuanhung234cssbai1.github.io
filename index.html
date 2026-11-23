@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên CLB Thể Thao Điện Tử</title>
+    <style>
+        /* 17. Tạo class .mytextbox để định dạng các ô nhập liệu */
+        .mytextbox {
+            color: #99FF33;
+            background-color: #006699;
+            border: 1px solid #996633;
+            width: 300px;
+            padding: 5px; /* Thêm chút padding cho đẹp */
+            border-radius: 4px; /* Bo tròn theo yêu cầu CSS3 */
+        }
+
+        /* 18. Tạo style cho table */
+        #form1 table {
+            border: 5px groove #993366;
+            background-color: #FFDDDD;
+            color: #003399;
+            border-radius: 8px; /* Tùy chỉnh CSS3 */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng bóng đổ CSS3 */
+        }
+
+        #form1 table td {
+            border: 1px solid #CC9999;
+            padding: 8px;
+        }
+
+        #form1 table {
+            margin: 0px auto;
+        }
+
+        caption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form1" action="#" method="POST">
+        <table cellpadding="4" width="500" cellspacing="0">
+            <caption>ĐĂNG KÝ THÀNH VIÊN CLB Thể Thao Điện Tử </caption>
+            
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" id="txtHoTen" class="mytextbox" required placeholder="Nhập họ và tên..."></td>
+            </tr>
+
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" id="txtUserName" class="mytextbox" required placeholder="Nhập tên đăng nhập..."></td>
+            </tr>
+
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" id="txtPass" class="mytextbox" required placeholder="Nhập mật khẩu..."></td>
+            </tr>
+
+            <tr>
+                <td>Gõ lại mật khẩu</td>
+                <td><input type="password" id="txtRepass" class="mytextbox" required placeholder="Xác nhận lại mật khẩu..."></td>
+            </tr>
+
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" id="rdNam" name="rdGioiTinh" value="0" checked> <label for="rdNam">Nam</label>
+                    <input type="radio" id="rdNu" name="rdGioiTinh" value="1"> <label for="rdNu">Nữ</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ngoại ngữ</td>
+                <td>
+                    <input type="checkbox" id="chkAnh" name="chkNgoaiNgu"> <label for="chkAnh">Anh văn</label>
+                    <input type="checkbox" id="chkPhap" name="chkNgoaiNgu"> <label for="chkPhap">Pháp văn</label>
+                    <input type="checkbox" id="chkHoa" name="chkNgoaiNgu"> <label for="chkHoa">Hoa văn</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <select id="cbongheNghiep" class="mytextbox" style="width: 312px;">
+                        <option value="0">Bạn làm nghề gì</option>
+                        <option value="1">Học sinh - Sinh viên</option>
+                        <option value="2">Giáo viên</option>
+                        <option value="3">Nhân viên</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Độ tuổi</td>
+                <td>
+                    <input type="number" name="txtDoTuoi" class="mytextbox" min="18" max="45" value="20" style="width: 100px;"> (Từ 18 đến 45)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thành phố</td>
+                <td>
+                    <input type="text" name="txtThanhPho" class="mytextbox" list="dsThanhPho" placeholder="Chọn hoặc nhập thành phố...">
+                    <datalist id="dsThanhPho">
+                        <option value="Hồ Chí Minh">
+                        <option value="Hà Nội">
+                        <option value="Đà Nẵng">
+                        <option value="Cần Thơ">
+                        <option value="Hải Phòng">
+                        <option value="Nha Trang">
+                        <option value="Đà Lạt">
+                    </datalist>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Hình</td>
+                <td><input type="file" id="fHinh" class="mytextbox" style="background: transparent; color: #003399; border: none;"></td>
+            </tr>
+
+            <tr>
+                <td>Sở thích</td>
+                <td><textarea id="txtSoThich" class="mytextbox" rows="3" placeholder="Nhập sở thích của bạn..."></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" id="btnDangKy" value="Đăng ký" style="padding: 5px 15px; cursor: pointer; font-weight: bold;">
+                    <input type="reset" id="btnXoa" value="Làm lại" style="padding: 5px 15px; cursor: pointer; font-weight: bold; margin-left: 10px;">
+                    <input type="hidden" name="NgayDangKy" value="03/23/2023">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
